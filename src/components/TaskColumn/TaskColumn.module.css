@@ -1,0 +1,49 @@
+.columnPaper {
+  flex: 1 !important;
+  padding: 16px !important;
+  background: #18191c !important;
+  border-radius: 24px !important;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.4) !important;
+  color: #fff !important;
+  min-width: 300px !important;
+  max-width: "32.5%" !important;
+  border: 1px solid #232325 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  margin-bottom: 16px !important;
+}
+
+.columnTitle {
+  color: #fff !important;
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+}
+
+.columnSubtitle {
+  color: #bdbdbd !important;
+  font-weight: 400 !important;
+}
+
+.columnTasks {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  flex: 1 !important;
+  overflow: auto !important;
+  max-height: calc(100vh - 250px) !important;
+  min-height: calc(100vh - 250px) !important;
+}
+
+.addTaskBtn {
+  color: #fff !important;
+  border-color: #444 !important;
+  border-radius: 16px !important;
+  margin-top: 16px !important;
+  width: 100% !important;
+  transition: border-color 0.2s, background 0.2s !important;
+}
+
+.addTaskBtn:hover {
+  border-color: #fff !important;
+  background: #232325 !important;
+}

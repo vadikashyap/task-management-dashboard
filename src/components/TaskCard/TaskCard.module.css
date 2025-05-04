@@ -1,0 +1,40 @@
+.taskCard {
+  background: #232325 !important;
+  color: #fff !important;
+  border-radius: 16px !important;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid #232325 !important;
+  min-height: fit-content;
+}
+
+.taskCardContent {
+  padding: 16px !important;
+}
+
+.taskCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.taskCardTitle {
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  color: #fff !important;
+}
+
+.taskCardMenuBtn {
+  color: #bdbdbd !important;
+}
+
+.taskCardDesc {
+  color: #bdbdbd !important;
+  margin-top: 8px !important;
+}
+
+.taskCardDate {
+  color: #888 !important;
+  margin-top: 8px !important;
+  display: block !important;
+  font-size: 0.85rem !important;
+}

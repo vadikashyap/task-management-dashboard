@@ -1,46 +1,109 @@
-# Getting Started with Create React App
+# Task Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern React + Redux Saga based task management app with a beautiful UI, instant feedback, and robust state management.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 How to Run Locally
 
-### `npm start`
+1. **Clone the repository:**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+   ```bash
+   git clone <repo-url>
+   cd task-management
+   ```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. **Install dependencies:**
 
-### `npm test`
+   ```bash
+   npm install
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. **Start the mock API server:**
 
-### `npm run build`
+   ```bash
+   npx json-server --watch db.json --port 3001
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   - This will run a fake REST API at [http://localhost:3001](http://localhost:3001).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Start the React app:**
+   ```bash
+   npm start
+   ```
+   - App will be available at [http://localhost:3000](http://localhost:3000).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🏗️ Architecture & Approach
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### **1. UI Layer (src/components)**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **TaskBoard:** Main board showing all tasks, columns, and modals.
+- **TaskColumn:** Shows tasks by status (e.g., To Do, In Progress, Done).
+- **TaskCard:** Individual task card with edit/delete options.
+- **AddTaskModal:** Modal for adding/editing tasks.
+- **DeleteWarningModal:** Confirmation modal for delete actions.
+- **Loading, ErrorBox, Header:** Utility and layout components.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### **2. State Management (src/store)**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **Redux + Redux Saga:** All task data is managed in Redux. Sagas handle async API calls and side effects.
+- **Modules:** Each feature (like `task`) has its own folder with actions, reducers, sagas, and types.
+- **Optimistic Updates:** Adding/editing/deleting tasks updates the UI instantly; API calls run in the background.
 
-## Learn More
+### **3. API Layer (src/api)**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **taskApi:** Handles all HTTP requests to the mock server (`json-server`).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### **4. Data Flow**
+
+- UI dispatches Redux actions (e.g., add, update, delete task).
+- Sagas listen for these actions, perform API calls, and update the Redux state.
+- UI components subscribe to Redux state and re-render automatically.
+
+### **5. UX Details**
+
+- **Delete Confirmation:** Deleting a task always shows a confirmation modal.
+- **Loading State:** Only shown when fetching all tasks (not for add/edit/delete).
+- **Error Handling:** Errors are shown in a user-friendly way.
+
+---
+
+## 📁 Folder Structure (short)
+
+```
+src/
+  components/
+    TaskBoard/
+    TaskColumn/
+    TaskCard/
+    AddTaskModal/
+    DeleteWarningModal/
+    ...
+  store/
+    modules/
+      task/
+        actions.ts
+        reducers.ts
+        sagas.ts
+        types.ts
+        selectors.ts
+    ...
+  api/
+    taskApi.ts
+  ...
+db.json
+```
+
+---
+
+## ✨ Features
+
+- Add, edit, and delete tasks with instant UI feedback.
+- Confirmation modal before deleting any task.
+- Clean, modern UI with Material UI.
+- Robust state management with Redux & Saga.
+- Mock backend with `json-server`.
+
+---

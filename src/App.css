@@ -36,3 +36,54 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background: #18191c;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+.add-task-modal .MuiModal-backdrop {
+  background: rgb(0 0 0 / 87%) !important;
+}
+.bg-main {
+  height: 100vh;
+  width: 100vw;
+  background: #18191c url("./assets/images/37.webp") no-repeat right center;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: auto;
+}
+
+/* Hide scrollbar by default, show on hover/scroll (for Webkit browsers) */
+::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+  transition: background 0.2s;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+:hover::-webkit-scrollbar-thumb,
+:active::-webkit-scrollbar-thumb,
+:focus::-webkit-scrollbar-thumb {
+  background: #444; /* ya koi bhi color jo aapko chahiye */
+  border-radius: 8px;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+*:hover,
+*:focus,
+*:active {
+  scrollbar-color: #444 #232325;
+}

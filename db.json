@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Complete project setup",
+      "description": "Set up the basic project structure and dependencies",
+      "status": "TODO"
+    },
+    {
+      "id": "2",
+      "title": "Implement task board 1",
+      "description": "Create the Kanban board layout",
+      "status": "IN_PROGRESS"
+    },
+    {
+      "id": "3",
+      "title": "Add task creation form",
+      "description": "Implement the form to create new tasks",
+      "status": "DONE"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+.modalDialogTitle {
+  background: #161616 !important;
+  color: #fff !important;
+}
+
+.modalDialogContent {
+  background: #161616 !important;
+  color: #fff !important;
+}
+
+.modalDialogActions {
+  background: #161616 !important;
+}
+
+.inputField {
+  color: #fff !important;
+}
+
+.inputLabel {
+  color: #fff !important;
+}
+
+.menuItem {
+  color: #fff !important;
+}
+
+.addTaskBtn {
+  background: #fff !important;
+  color: #161616 !important;
+  transition: background 0.2s;
+}
+
+.addTaskBtn:hover {
+  background: #e0e0e0 !important;
+}
+
+.addTaskBtn:disabled,
+.addTaskBtn.Mui-disabled {
+  background: #fff !important ;
+  color: #161616 !important;
+  opacity: 0.7 !important;
+  cursor: not-allowed !important;
+}
