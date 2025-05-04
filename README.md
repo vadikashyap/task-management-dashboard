@@ -9,7 +9,7 @@ A modern React + Redux Saga based task management app with a beautiful UI, insta
 1. **Clone the repository:**
 
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/vadikashyap/task-management-dashboard.git
    cd task-management
    ```
 
